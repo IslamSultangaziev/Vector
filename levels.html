@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector — Уровни</title>
+    <link rel="stylesheet" href="levels.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/vector_logo_white_transparent.png" alt="Vector">
+        </a>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="character.html">Персонажи</a>
+            <a href="parckour.html">Трюки</a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nekki.vector&hl=ru" class="free-button">
+                Скачать
+            </a>
+        </nav>
+        <div class="site-search">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="siteSearchInput"
+                    placeholder="ПОИСК ПО САЙТУ..."
+                    autocomplete="off"
+                >
+                <button id="siteSearchButton" type="button">⌕</button>
+            </div>
+
+            <div class="search-results" id="siteSearchResults"></div>
+        </div>
+    </header>
+    <section class="levels-intro">
+        <div class="levels-intro-overlay"></div>
+        <div class="levels-intro-content">
+            <span>МИР VECTOR</span>
+            <h1>УРОВНИ</h1>
+            <p>
+                Каждый новый этап — новое испытание.
+                Преодолевай препятствия, совершенствуй свои навыки
+                и продолжай путь к свободе.
+            </p>
+        </div>
+    </section>
+    <section class="levels-description">
+        <span class="section-label">ТВОЁ ПУТЕШЕСТВИЕ</span>
+        <h2>ПУТЬ К СВОБОДЕ</h2>
+        <p>
+            Мир Vector наполнен опасностями и препятствиями.
+            Каждый уровень проверяет твою реакцию, скорость
+            и способность принимать решения.
+        </p>
+    </section>
+    <section class="levels-list">
+        <div class="level-card" id="Level_1">
+            <div class="level-image">
+                <img src="images/Level_1.webp" alt="Первый уровень">
+                <span class="level-number">01</span>
+            </div>
+            <div class="level-info">
+                <span>НАЧАЛО ПУТИ</span>
+                <h3>ПЕРВЫЕ ШАГИ</h3>
+                <p>
+                    Познакомься с миром паркура.
+                    Освой основные движения и научись
+                    преодолевать первые препятствия.
+                </p>
+            </div>
+        </div>
+        <div class="level-card" id="Level_2">
+            <div class="level-image">
+                <img src="images/Level_2.webp" alt="Второй уровень">
+                <span class="level-number">02</span>
+            </div>
+            <div class="level-info">
+                <span>НОВЫЕ ИСПЫТАНИЯ</span>
+                <h3>ЗОНА ОПАСНОСТИ</h3>
+                <p>
+                    Препятствия становятся сложнее,
+                    а цена ошибки — выше.
+                    Проверь свои навыки.
+                </p>
+            </div>
+        </div>
+        <div class="level-card" id="Level_3">
+            <div class="level-image">
+                <img src="images/Level_3.webp" alt="Третий уровень">
+                <span class="level-number">03</span>
+            </div>
+            <div class="level-info">
+                <span>ПОСЛЕДНИЙ РУБЕЖ</span>
+                <h3>ПУТЬ К СВОБОДЕ</h3>
+                <p>
+                    Впереди самые серьёзные испытания.
+                    Только мастерство поможет
+                    добраться до конца.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="level-modal" id="levelModal">
+        <div class="level-modal-content">
+            <button class="level-modal-close" id="closeLevelModal">
+                &times;
+            </button>
+            <span class="level-modal-label" id="modalLevelNumber">
+                ЗОНА 01
+            </span>
+            <h2 id="modalLevelTitle">ПЕРВЫЕ ШАГИ</h2>
+            <p id="modalLevelDescription">
+                Описание уровня.
+            </p>
+            <div class="level-modal-video">
+                <video autoplay muted loop playsinline id="modalLevelVideo" controls playsinline>
+                    <source id="modalVideoSource"
+                        src="videos/level1.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <h2>VECTOR</h2>
+        <p>© NEKKI. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+<script src="levels.js"></script>
+<script src="search.js"></script>
+<script src="search-data.js"></script>
+</html>

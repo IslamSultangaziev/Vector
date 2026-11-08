@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="parckour.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/vector_logo_white_transparent.png" alt="Vector">
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="levels.html">Уровни</a>
+            <a href="character.html">Персонажи</a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nekki.vector&hl=ru" class="free-button">
+                Скачать
+            </a>
+        </nav>
+        <div class="site-search">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="siteSearchInput"
+                    placeholder="ПОИСК ПО САЙТУ..."
+                    autocomplete="off"
+                >
+                <button id="siteSearchButton" type="button">⌕</button>
+            </div>
+
+            <div class="search-results" id="siteSearchResults"></div>
+        </div>
+    </header>
+    <section class="tricks-section">
+
+        <div class="tricks-heading">
+            <span>МИР VECTOR</span>
+            <h1>ТРЮКИ</h1>
+            <p>Изучай движения и открывай новые возможности</p>
+        </div>
+        <div class="trick-category">
+            <div class="category-heading">
+                <h2>ЛЕГКО</h2>
+                <span>01 / НАЧАЛО</span>
+            </div>
+
+            <div class="trick-slider">
+                <button class="slider-arrow prev" onclick="changeTrick('easy', -1)">&#10094;</button>
+                <div class="trick-card" id="easy-card"></div>
+                <button class="slider-arrow next" onclick="changeTrick('easy', 1)">&#10095;</button>
+            </div>
+            <div class="slider-dots" id="easy-dots"></div>
+        </div>
+
+        <div class="trick-category">
+            <div class="category-heading">
+                <h2>СЛОЖНО</h2>
+                <span>02 / ПРОДВИНУТЫЙ</span>
+            </div>
+            <div class="trick-slider">
+                <button class="slider-arrow prev" onclick="changeTrick('hard', -1)">&#10094;</button>
+                <div class="trick-card" id="hard-card"></div>
+                <button class="slider-arrow next" onclick="changeTrick('hard', 1)">&#10095;</button>
+            </div>
+            <div class="slider-dots" id="hard-dots"></div>
+        </div>
+
+        <div class="trick-category">
+            <div class="category-heading">
+                <h2>НЕВОЗМОЖНО</h2>
+                <span>03 / ЭКСТРИМ</span>
+            </div>
+
+            <div class="trick-slider">
+                <button class="slider-arrow prev" onclick="changeTrick('impossible', -1)">&#10094;</button>
+                <div class="trick-card" id="impossible-card"></div>
+                <button class="slider-arrow next" onclick="changeTrick('impossible', 1)">&#10095;</button>
+            </div>
+            <div class="slider-dots" id="impossible-dots"></div>
+        </div>
+
+    </section>
+    <div class="trick-modal" id="trickModal">
+        <div class="trick-modal-window">
+            <button class="trick-close" id="closeTrickModal">&times;</button>
+            <span id="modalTrickCategory"></span>
+            <h2 id="modalTrickName"></h2>
+            <p id="modalTrickDescription"></p>
+            <video autoplay muted loop playsinline id="trickVideo" controls>
+            <source id="trickVideoSource" src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <footer class="footer">
+        <h2>VECTOR</h2>
+        <p>© NEKKI. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+<script src="parckour.js"></script>
+<script src="search.js"></script>
+<script src="search-data.js"></script>
+</html>

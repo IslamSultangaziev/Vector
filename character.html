@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector — Уровни</title>
+    <link rel="stylesheet" href="character.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/vector_logo_white_transparent.png" alt="Vector">
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="levels.html">Уровни</a>
+            <a href="parckour.html">Трюки</a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nekki.vector&hl=ru" class="free-button">
+                Скачать
+            </a>
+        </nav>
+        <div class="site-search">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="siteSearchInput"
+                    placeholder="ПОИСК ПО САЙТУ..."
+                    autocomplete="off"
+                >
+                <button id="siteSearchButton" type="button">⌕</button>
+            </div>
+
+            <div class="search-results" id="siteSearchResults"></div>
+        </div>
+    </header>
+    <section class="levels-intro">
+        <div class="levels-intro-overlay"></div>
+        <div class="levels-intro-content">
+            <span>МИР VECTOR</span>
+            <h1>ПЕРСОНАЖИ</h1>
+            <p>
+                Те, кто определяет правила этого мира
+            </p>
+        </div>
+    </section>
+    <section class="characters-section">
+        <div class="characters-list">
+            <div class="character-card" id="person1" data-character="0">
+                <div class="character-image">
+                    <img src="images/Runner.webp" alt="Вектор">
+                </div>
+                <div class="character-info">
+                    <span>ГЛАВНЫЙ ГЕРОЙ</span>
+                    <h3>БЕГЛЕЦ</h3>
+                    <p>Главный герой серии. Раб, который вырвался на свободу и теперь вынужден скрываться от преследователей.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="character-card" id="person2" data-character="1">
+                <div class="character-image">
+                    <img src="images/Hunter_Character.webp" alt="Охотник">
+                </div>
+                <div class="character-info">
+                    <span>ПРЕСЛЕДОВАТЕЛЬ</span>
+                    <h3>ОХОТНИК</h3>
+                    <p>Один из антагонистов в игре "Vector". Его цель — преследовать главного героя и обезвредить того электрошокером.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="character-card" id="person3" data-character="2">
+                <div class="character-image">
+                    <img src="images/Mask.webp" alt="ГЕРОЙ">
+                </div>
+                <div class="character-info">
+                    <span>ДОП.ПЕРСОНАЖ</span>
+                    <h3>МАСКА</h3>
+                    <p>Хорошему охотнику требуется быть хотя бы немножко безумным. Он же относился к своей работе слишком серьезно и полностью сошел с ума. Теперь, ставший обузой для своего начальства, он просто бежит без цели, наслаждаясь каждым моментом.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="character-card" id="person4" data-character="3">
+                <div class="character-image">
+                    <img src="images/Micki_Heroes.webp" alt="ГЕРОЙ">
+                </div>
+                <div class="character-info">
+                    <span>ДОП.ПЕРСОНАЖ</span>
+                    <h3>МИККИ</h3>
+                    <p>Раньше Микки возглавляла группу сопротивления в другом городе, очень похожем на тот, в котором она сейчас оказалась. И она знает, как организовывать повстанцев, что делает ее очень опасной для Корпорации.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="character-card" id="person5" data-character="4">
+                <div class="character-image">
+                    <img src="images/Dancer.webp" alt="ГЕРОЙ">
+                </div>
+                <div class="character-info">
+                    <span>ДОП.ПЕРСОНАЖ</span>
+                    <h3>ДАНСЕР</h3>
+                    <p>Самый утонченный клон на рынке, прекрасная компаньонша, стильная, харизматичная, идеальная во всех отношениях. С одним единственным недостатком — такую душу нелегко приручить. Теперь она бежит к свободе, и награда за ее голову будет действительно высокой, если кто-нибудь сможет её поймать.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="character-card" id="person6" data-character="5">
+                <div class="character-image">
+                    <img src="images/Shadow.webp" alt="ГЕРОЙ">
+                </div>
+                <div class="character-info">
+                    <span>ДОП.ПЕРСОНАЖ</span>
+                    <h3>ТЕНЬ</h3>
+                    <p>Персонаж, являющийся отсылкой к другой игре от Nekki: «Бой с тенью».<br>
+                        Его происхождение строго засекречено, и даже само его существование категорически отрицается Корпорацией. В конце концов, он клон воина из другого, гораздо более жестокого времени. Он не помнит, кем он был, но считает, что есть другие миры, в которые он должен вернуться.</p>
+                    <button>ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="character-popup" id="characterPopup">
+
+        <div class="character-popup-window">
+
+            <button class="character-popup-close" id="characterPopupClose">
+            &times;
+            </button>
+
+            <div class="character-popup-layout">
+                <div class="character-popup-image">
+                    <img id="popupCharacterImage" src="" alt="">
+                </div>
+                <div class="character-popup-info">
+                    <span id="popupCharacterType"></span>
+                    <h2 id="popupCharacterName"></h2>
+                    <p id="popupCharacterDescription"></p>
+                </div>
+                <div class="character-popup-video">
+
+                    <video autoplay muted loop playsinliene id="popupCharacterVideo" controls>
+                        <source id="popupCharacterVideoSource" src="" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <h2>VECTOR</h2>
+        <p>© NEKKI. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+<script src="character.js"></script>
+<script src="search.js"></script>
+<script src="search-data.js"></script>
+</html>
